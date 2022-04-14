@@ -15,7 +15,7 @@ INSERT INTO pwned (email, password) VALUES ('joe@example.com', 'password');
 ```
 Do not forget to change mysql username and password in main.go file.
 
-<b>db, err = sql.Open("mysql", "root:password.@tcp(localhost:3306)/data")</b>
+<b>db, err = sql.Open("mysql", "root:password@tcp(localhost:3306)/data")</b>
 
 Run the program and enjoy :)
 ```
