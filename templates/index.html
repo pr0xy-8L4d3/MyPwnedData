@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Pwned Database</title>
+  <link rel="icon" type="image/x-icon" href="statics/images/favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="../statics/css/hacker.css">
+<style>
+body {
+  background-image: url('statics/images/go_image2.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.SearchBar2 {
+     position: absolute;
+     top: 355px;
+     left: 575px;
+}
+
+.SearchBar input {
+     height: 30px;
+     width: 300px;
+}
+
+<link rel="stylesheet" href="/images/hacker.css" >
+</style>
+</head> 
+<body>
+
+<h2>My Pwned Database</h2>
+
+
+<div class="SearchBar">
+<form action="/" method="POST">
+  <label for="email">Email:</label><br>
+  <input type="text" id="productID" name="pwnEmail"><br>
+</div>
+  <input type="submit" value="Search">
+<br></br>
+</form>
+
+
+
+ {{if .}}
+  <ul>
+  {{range .}}
+    <li>Email: {{.Email}}</li>
+    <li>Password: {{.Password}}</li>
+    <br>
+  {{end}}
+  </ul>
+{{end}}
+
+
+</body>
+</html>
