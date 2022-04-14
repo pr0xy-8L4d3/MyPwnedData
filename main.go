@@ -24,7 +24,7 @@ func main() {
 	tpl, _ = template.ParseGlob("templates/*.html")
 	var err error
 
-	db, err = sql.Open("mysql", "root:password.@tcp(localhost:3306)/data")
+	db, err = sql.Open("mysql", "root:password@tcp(localhost:3306)/data")
 	err = db.Ping()
   	errCheck(err)
 	if err != nil {
